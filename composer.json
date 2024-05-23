@@ -1,44 +1,52 @@
 {
-    "name": "zabecki/laravel-recaptcha",
+    "authors": [
+        {
+            "email": "roby.belotti@gmail.com",
+            "homepage": "https://biscolab.com",
+            "name": "Roberto Belotti",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Biscolab\\ReCaptcha\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Biscolab\\ReCaptcha\\Tests\\": "tests/"
+        }
+    },
     "description": "Simple and painless Google reCAPTCHA package for Laravel 5.5 or greater",
-    "version": "4.4.0",
-    "license": "MIT",
-    "type": "library",
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "ReCaptcha": "Biscolab\\ReCaptcha\\Facades\\ReCaptcha"
+            },
+            "providers": [
+                "Biscolab\\ReCaptcha\\ReCaptchaServiceProvider"
+            ]
+        }
+    },
+    "homepage": "https://biscolab.com/laravel-recaptcha",
     "keywords": [
         "recaptcha",
         "captcha",
         "laravel",
         "validation"
     ],
-    "homepage": "https://biscolab.com/laravel-recaptcha",
-    "authors": [
-        {
-            "name": "Roberto Belotti",
-            "email": "roby.belotti@gmail.com",
-            "homepage": "https://biscolab.com",
-            "role": "Developer"
-        }
-    ],
+    "license": "MIT",
+    "name": "tpshousing-github-com/laravel-recaptcha",
     "require": {
-        "php": "^7.1|^8.0",
-        "laravel/framework": "^5.5|^6.0|^7.0|^8.0"
+        "laravel/framework": "^5.5|^6.0|^7.0|^8.0",
+        "php": "^7.1|^8.0"
     },
     "require-dev": {
         "orchestra/testbench": "~3.0",
         "phpunit/phpunit": "6.*|7.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Biscolab\\ReCaptcha\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Biscolab\\ReCaptcha\\Tests\\": "tests/"
-        }
     },
     "scripts": {
         "test": "vendor/bin/phpunit --colors=always"
@@ -46,14 +54,6 @@
     "suggest": {
         "biscolab/laravel-authlog": "It allows to handle logged-in users and force log-out if needed"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Biscolab\\ReCaptcha\\ReCaptchaServiceProvider"
-            ],
-            "aliases": {
-                "ReCaptcha": "Biscolab\\ReCaptcha\\Facades\\ReCaptcha"
-            }
-        }
-    }
+    "type": "library",
+    "version": "4.4.0"
 }
